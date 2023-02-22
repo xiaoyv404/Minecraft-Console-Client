@@ -83,7 +83,8 @@ namespace MinecraftClient.Protocol.Handlers.Forge
                     //         "version": "Beta 1.3 - 1.8.0"
                     //     }]
                     // }
-                    Logger().info(data.Properties["modList"].DataArray.ToString());
+                    ILogger Log;
+                    Log.info(data.Properties["modList"].DataArray.ToString());
                     foreach (Json.JSONData mod in data.Properties["modList"].DataArray)
                     {
                         String modid = mod.Properties["modid"].StringValue;
